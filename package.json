@@ -15,8 +15,7 @@
     "url": "https://github.com/ionic-team/stencil-component-starter.git"
   },
   "files": [
-    "dist/",
-    "loader/"
+    "dist/"
   ],
   "scripts": {
     "build": "stencil build --docs",
@@ -26,14 +25,11 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@stencil/core": "^4.0.0"
-  },
-  "devDependencies": {
+    "@stencil/core": "^4.0.0",
+    "@stencil/postcss": "^2.1.0",
+    "@stencil/sass": "^3.0.4",
     "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.11",
-    "jest": "^27.5.1",
-    "jest-cli": "^27.5.1",
-    "puppeteer": "^20.7.3"
+    "@types/node": "^16.18.38"
   },
   "license": "MIT"
 }
