@@ -1,31 +1,22 @@
 import { Host, h } from "@stencil/core";
 import { MyComponent } from "./my-component";
 
-export class ViewCollection {
-  private constructor() {}
-  static first($: MyComponent) {
-    return (
-      <Host>
-        <div class="test">Hello, World! I'm {$.getText()}</div>
-        <span>First</span>
-      </Host>
-    );
-  }
-  static second($: MyComponent) {
-    return (
-      <Host>
-        <div class="test">Hello, World! I'm {$.getText()}</div>
-        <span>Second</span>
-      </Host>
-    );
-  }
-}
-
-export function renderView($: MyComponent) {
+function first($: MyComponent) {
   return (
     <Host>
       <div class="test">Hello, World! I'm {$.getText()}</div>
-      <span>Single</span>
+      <span>First</span>
     </Host>
   );
 }
+
+function second($: MyComponent) {
+  return (
+    <Host>
+      <div class="test">Hello, World! I'm {$.getText()}</div>
+      <span>Second</span>
+    </Host>
+  );
+}
+
+export const ViewCollection = { first, second };
